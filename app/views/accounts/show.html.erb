@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Opening cash:</strong>
+  <%= @account.opening_cash %>
+</p>
+
+<p>
+  <strong>Opening bank:</strong>
+  <%= @account.opening_bank %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= @account.bank %>
+</p>
+<%= image_tag (@account.image.medium) if @account.image? %>
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

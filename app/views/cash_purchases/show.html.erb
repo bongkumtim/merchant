@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stock description:</strong>
+  <%= @cash_purchase.stock_description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cash_purchase.user_id %>
+</p>
+
+<p>
+  <strong>Receipt:</strong>
+ <%= image_tag (@cash_purchase.image.medium) if @cash_purchase.image? %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @cash_purchase.amount %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_cash_purchase_path(@cash_purchase) %> |
+<%= link_to 'Back', cash_purchases_path %>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :credit_purchases
+  resources :cash_purchases
+  resources :accounts
   devise_for :users
 
   authenticated :user do

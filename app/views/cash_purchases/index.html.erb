@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cash Purchases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stock description</th>
+      <th>User</th>
+      <th>Amount</th>
+      <th>Debit purchase cost of sales</th>
+      <th>Credit cash current asset</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cash_purchases.each do |cash_purchase| %>
+      <tr>
+        <td><%= cash_purchase.stock_description %></td>
+        <td><%= cash_purchase.user_id %></td>
+        <td><%= cash_purchase.amount %></td>
+        <td><%= cash_purchase.debit_purchase_cost_of_sales %></td>
+        <td><%= cash_purchase.credit_cash_current_asset %></td>
+        <td><%= link_to 'Show', cash_purchase %></td>
+        <td><%= link_to 'Edit', edit_cash_purchase_path(cash_purchase) %></td>
+        <td><%= link_to 'Destroy', cash_purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cash Purchase', new_cash_purchase_path %>

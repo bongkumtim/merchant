@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stock description:</strong>
+  <%= @credit_purchase.stock_description %>
+</p>
+
+<p>
+  <strong>Creditor name:</strong>
+  <%= @credit_purchase.creditor_name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @credit_purchase.user_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @credit_purchase.amount %>
+</p>
+
+<p>
+  <strong>Receipt:</strong>
+  <%= image_tag (@credit_purchase.image.medium) if @credit_purchase.image? %>
+</p>
+
+<%= link_to 'Edit', edit_credit_purchase_path(@credit_purchase) %> |
+<%= link_to 'Back', credit_purchases_path %>

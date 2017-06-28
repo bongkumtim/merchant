@@ -1,0 +1,32 @@
+<%= form_for(cash_purchase) do |f| %>
+  <% if cash_purchase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cash_purchase.errors.count, "error") %> prohibited this cash_purchase from being saved:</h2>
+
+      <ul>
+      <% cash_purchase.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :stock_description %>
+    <%= f.text_field :stock_description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

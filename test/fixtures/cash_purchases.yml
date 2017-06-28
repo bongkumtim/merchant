@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stock_description: MyString
+  user_id: 1
+  image: 
+  amount: 9.99
+  debit_purchase_cost_of_sales: 9.99
+  credit_cash_current_asset: 9.99
+
+two:
+  stock_description: MyString
+  user_id: 1
+  image: 
+  amount: 9.99
+  debit_purchase_cost_of_sales: 9.99
+  credit_cash_current_asset: 9.99
